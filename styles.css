@@ -1,0 +1,34 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f3f5f1; color: #20342c; font-family: system-ui, sans-serif; }
+main { max-width: 940px; margin: 60px auto; padding: 24px; }
+header { margin-bottom: 28px; }
+.eyebrow { color: #527661; letter-spacing: .16em; font-size: 12px; font-weight: 700; }
+h1 { font-size: clamp(28px, 5vw, 42px); margin: 10px 0; letter-spacing: -.04em; }
+header > p:last-child, .hint { color: #5b6c62; line-height: 1.6; }
+.microwave { display: grid; grid-template-columns: 1.3fr 1fr; background: #dce2dc; border: 1px solid #b9c6bd; border-radius: 22px; padding: 24px; gap: 28px; box-shadow: 0 16px 35px #20342c12; }
+.door { position: relative; min-height: 330px; background: #24322e; border: 6px solid #3d4c44; border-radius: 12px; padding: 36px 35px 36px 20px; transition: background .2s; }
+.door > span:first-child { color: #bac9c0; font-size: 11px; letter-spacing: .13em; }
+.window { height: 205px; margin-top: 18px; background: #17211d; border-radius: 8px; position: relative; overflow: hidden; }
+.handle { position: absolute; right: 10px; top: 75px; width: 12px; height: 160px; background: #b5bfb7; border-radius: 8px; }
+.plate { position: absolute; width: 80%; height: 18px; background: #7f8f82; border-radius: 50%; bottom: 25px; left: 10%; }
+.bowl { position: absolute; width: 90px; height: 48px; background: #d9dfcf; border-radius: 8px 8px 45px 45px; bottom: 35px; left: calc(50% - 45px); }
+.door.open { background: #718478; border-style: dashed; }
+.door.open .window { background: #a9b9ab; }
+.door.heating .window { background: #69572e; box-shadow: inset 0 0 55px #e7bd5d55; }
+.display-label { font-size: 10px; letter-spacing: .15em; margin: 0; }
+output { display: block; font-family: ui-monospace, monospace; font-size: 46px; margin: 4px 0; }
+#status { min-height: 44px; font-size: 14px; line-height: 1.5; }
+label { display: block; font-size: 13px; margin-bottom: 8px; }
+.time-input, .button-row { display: flex; gap: 8px; }
+input { width: 100%; min-width: 0; padding: 12px; border: 1px solid #99ad9f; border-radius: 7px; font: inherit; }
+button { border: 1px solid #9caf9f; border-radius: 7px; padding: 12px 14px; background: #f6f8f4; color: #20342c; font: inherit; font-size: 14px; cursor: pointer; }
+button:hover:not(:disabled) { background: #e5eee2; }
+button:focus-visible, input:focus-visible { outline: 3px solid #448661; outline-offset: 3px; }
+button:disabled, input:disabled { opacity: .5; cursor: not-allowed; }
+.time-input button { white-space: nowrap; }
+.primary { width: 100%; margin: 14px 0 8px; background: #286144; border-color: #286144; color: white; }
+.primary:hover:not(:disabled) { background: #194b32; }
+.button-row button { flex: 1; }
+.door-button { margin-top: 20px; }
+.hint { font-size: 13px; }
+@media (max-width: 650px) { main { margin: 16px auto; } .microwave { grid-template-columns: 1fr; padding: 18px; gap: 22px; } .door { min-height: 260px; } .window { height: 160px; } }
